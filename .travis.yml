@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run robobooga/docker-react npm run test -- --coverage
+
+deploy: 
+  provider: elasticbeanstalk
+  region: "ap-southeast-1"
+  name: "docker"
+  env: "Docker-env"
+  bucket-name: "elasticbeanstalk-ap-southeast-1-122760526347"
+  bucket-path: "docker"
+  on: 
+    branch: master
+  access_key_id: $aws_access
+  secret_access_key:
+    secure: "$aws_s"
