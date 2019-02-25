@@ -17,6 +17,6 @@ deploy:
   bucket-path: "docker"
   on: 
     branch: master
-  access_key_id: $aws_access
+  access_key_id: $aws access
   secret_access_key:
     secure: "$aws_s"
